@@ -1,0 +1,318 @@
+/*  */
+.wrapper {
+    position: relative;
+    background-color: #f7f5f2;
+}
+/* Head section */
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #000;
+}
+
+.head__main {
+
+}
+
+.head__main-menu {
+    display: flex;
+    padding: 8px 16px;
+    width: 100vw;
+}
+
+.head__main-item {
+    width: 25%;
+}
+
+.head__main-item-link {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+.head__main-item-link:hover {
+    background-color: #ccc!important;
+    color: #000!important;
+}
+
+/* Content section */
+
+.content {
+    padding-bottom: 190.4px;
+}
+
+/* Banner section */
+
+.content__banner {
+}
+
+.content__banner div {
+    color: #fff;
+}
+
+.content__banner-img > div {
+    position: absolute;
+}
+
+.content__banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url('/theCoffee/assets/img/bannerMain/coffeehouse.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 75vh;
+    filter: grayscale(50%);
+}
+
+.content__banner-the-cafe {
+    font-size: 90px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.content__banner-address {
+    bottom: 10px;
+    right: 10px;
+}
+
+.content__banner-open-time {
+    bottom: 10px;
+    left: 15px;
+    background-color: #000;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* About section */
+
+.content > div:not(:first-child) {
+    text-align: center;
+}
+
+.content hr {
+    margin-top: 75vh;
+}
+
+.content > div > h4 {
+    display: inline-block;
+    margin-top: 58px;
+    margin-bottom: 58px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+}
+
+.content__about {
+    /* margin-top: 75vh; */
+}
+
+.content__about p,
+.content__about div,
+.content__menu,
+.content__where {
+    max-width: 700px!important;
+    text-align: start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content__about-comment {
+    display: inline-block;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-left: 6px solid #ccc!important;
+    background-color: #f1f1f1;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.content__about-store-img,
+.content__menu-product-img,
+.content__where-img {
+    margin-top: 16px;
+    display: inline-block;
+}
+
+.content__about-store-img img,
+.content__menu-product-img img,
+.content__where-img img {
+    display: block;
+    width: 100%;
+    filter: grayscale(80%);
+}
+
+.content__about b {
+    margin-right: 8px;
+}
+
+/* The menu section */
+
+.content__menu {
+    position: relative;
+    --width-menu: calc(100% - 32px);
+    --height-menu: 595px;
+}
+
+.content__menu-handle {
+    padding: 8px 16px;
+    font-size: 18px;
+    box-shadow: 0 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+.content__menu-handle > label {
+    display: flex;
+}
+
+.content__menu-handle > label > div{
+    width: 50%;
+    display: inline-block;
+}
+
+.content__menu-handle > label > div:hover {
+    cursor: pointer;
+}
+
+.content__menu-handle--active,
+.content__menu > input:checked ~ .content__menu-handle .content__menu-handle-drink {
+    background-color: #616161;
+    color: #fff;
+}
+
+.content__menu > input {
+    position: absolute;
+    opacity: 0; 
+    border: none;
+}
+
+.content__menu > input:checked ~ .content__menu-handle .content__menu-handle-eat {
+    background-color: transparent;
+    color: #000;
+}
+
+.content__menu > input:checked ~ .content__menu-products-menu-drink {
+    display: block;
+}
+
+.content__menu > input:checked ~ .content__menu-products-menu-eat {
+    display: none;
+}
+
+ul[class*="content__menu-products-menu"] {
+    padding: 48px 16px;
+    text-align: start;
+    font-size: 18px;    
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+}
+
+li[class*="content__menu-products-menu"] {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.content__menu-products-menu-drink {
+    display: none;
+}
+
+.content__menu-product-img {
+    margin-top: 32px;
+}
+
+/* Where section */
+
+.content__where > p{
+    text-align: start;
+}
+
+.content__where-img {
+    margin: unset;
+}
+
+.content__where p span {
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-transform: uppercase;
+    margin-right: 8px;
+    background-color: #000;
+    color: #fff;
+}
+
+.content__where p b {
+    margin-right: 8px;
+}
+
+.content__where form p input {
+    padding: 16px 8px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.content__where form p:last-child input {
+    width: unset;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    vertical-align: center;
+}
+
+.content__where form p:last-child input:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.content__where form {
+    text-align: start;
+}
+
+/* Footer section */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    font-weight: 400;
+    background-color: #f1f1f1;
+}
+
+.footer a {
+    text-decoration: underline;
+    margin-left: 8px;
+    color: #000;
+}
+
+
+.footer__main {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.footer a:hover {
+    color: rgb(128, 187, 41);
+}
+
